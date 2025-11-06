@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruit n Quality Table</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-300 text-gray-800 flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-5 rounded-lg shadow-md w-[94%] sm:w-[80%] md:w-[65%]">
+
+    <h2 class="text-2xl font-bold text-center mb-6 text-green-700">My Fruit & Quality List</h2>
+
+    <div class="flex flex-col sm:flex-row gap-3 mb-5">
+      <input id="fruitInput" type="text" placeholder="fruit (like apple)"
+      class="border border-gray-400 px-3 py-[9px] rounded-md flex-1 focus:outline-none focus:ring-1 focus:ring-green-400">
+
+      <input id="qualityInput" type="text" placeholder="quality (e.g. sweet, juicy)"
+      class="border border-gray-400 px-3 py-[9px] rounded-md flex-1 focus:outline-none focus:ring-1 focus:ring-green-400">
+
+      <button id="addBtn"
+      class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 active:scale-95 transition font-medium shadow">
+      + Add
+      </button>
+    </div>
+
+    <input id="searchBar" type="text" placeholder="type to search..."
+    class="border border-gray-400 px-3 py-2 rounded-md w-full mb-4 focus:outline-none focus:ring-1 focus:ring-green-400"
+    onkeyup="filterTable()">
+
+  
+    <div class="overflow-x-auto border border-gray-300 rounded-md">
+      <table id="fruitTable" class="w-full border-collapse text-left">
+        <thead class="bg-green-100">
+          <tr>
+            <th class="py-2 px-3 border-b border-gray-300">Fruit</th>
+            <th class="py-2 px-3 border-b border-gray-300">Quality</th>
+          </tr>
+        </thead>
+
+        <tbody class="bg-white">
+          <tr>
+            <td class="py-2 px-3 border-b">Apple</td>
+            <td class="py-2 px-3 border-b">crispy + sweet</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-3 border-b">Banana</td>
+            <td class="py-2 px-3 border-b">soft & ripe</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-3 border-b">Kiwi</td>
+            <td class="py-2 px-3 border-b">a bit sour</td>
+          </tr>
+          <tr>
+            <td class="py-2 px-3 border-b">Mango</td>
+            <td class="py-2 px-3 border-b">super juicy</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
